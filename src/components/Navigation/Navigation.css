@@ -1,0 +1,21 @@
+nav {
+  border: 1px solid green;
+}
+
+nav > ul {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid red;
+  text-align: center;
+}
+
+nav > ul > li {
+  height: 10%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

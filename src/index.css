@@ -1,13 +1,37 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.fullScreen {
+  height: 100vh;
+}
+
+/*login and register components styling*/
+
+.formLoginRegister {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: steelblue;
+}
+
+.formLoginRegister > form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: blue;
+  padding: 3rem;
+  text-align: center;
+  gap: 1rem;
+}
+
+.formLoginRegister > form > input[type="submit"] {
+  width: 50%;
+  align-self: center;
+}
+
+.formLoginRegister > form > a {
+  cursor: pointer;
 }
