@@ -7,7 +7,8 @@ import { useState } from "react";
 
 function App(){
 
-    const [routes,setRoute] = useState('login');
+   const [route,setRoute] = useState('login');
+   const [routeDisplay, setRouteDisplay] =useState('myAccount');
 
    const renderSwitch = (route) =>{
 
@@ -19,8 +20,8 @@ function App(){
             case 'home':
                 return (
                 <div id = "mainApp" className="fullScreen">
-                    <Navigation setRoute={setRoute}/>
-                    <Display/>
+                    <Navigation setRoute={setRoute} setRouteDisplay={setRouteDisplay}/>
+                    <Display routeDisplay={routeDisplay}/>
                 </div>);
             case 'register':
                 return <Register setRoute={setRoute}/>
@@ -32,7 +33,7 @@ function App(){
 
     return(
         <div>
-            {renderSwitch(routes)}
+            {renderSwitch(route)}
         </div>
     )
 }
