@@ -35,3 +35,19 @@
 .formLoginRegister > form > a {
   cursor: pointer;
 }
+
+/* Employees,Departments and JobTitles component*/
+.relativeDiv {
+  position: relative;
+}
+
+/*EmployeeForm, DepartmentForm and JobTitleForm*/
+
+.registrationForm {
+  position: absolute;
+  border: solid 5px blue;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(160, 235, 20, 1);
+}

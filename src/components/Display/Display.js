@@ -1,18 +1,18 @@
-import Dashboard from '../Dashboard/Dashboard';
+import Chart from '../Chart/Chart';
 import Departments from '../Departments/Departments';
 import Employees from '../Employees/Employees';
 import JobTitles from '../JobTitles/JobTitles';
 import MyAccount from '../MyAccount/MyAccount';
 import Reports from '../Reports/Reports';
-import { useState } from "react";
+
 
 function Display({routeDisplay}){
 
     const renderSwitch = (route) =>{
 
         switch(route){
-            case 'dashboard':
-                return <Dashboard />;
+            case 'chart':
+                return <Chart />;
             case 'departments':
                    return <Departments />
             case 'employees':
