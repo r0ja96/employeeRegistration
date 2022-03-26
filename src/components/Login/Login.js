@@ -3,13 +3,11 @@ function Login({setRoute}){
     return(
         <div className="fullScreen formLoginRegister">
             <form onSubmit={()=>setRoute('home')}>
-                <h1>Login</h1>
-                <label>Email</label>
-                <input type='text'/>
-                <label>Password</label>
-                <input type='text'/>
-                <input type='submit'  value='Login' />
-                <a onClick={()=>setRoute('register')}>Register</a>            
+                <h1>LOGIN</h1>
+                <input type='text' placeholder="E-MAIL"/>
+                <input type='text' placeholder="PASSWORD"/>
+                <input type='submit'  value='LOGIN' />
+                <a onClick={()=>setRoute('register')}>REGISTER</a>            
             </form>
         </div>
     );

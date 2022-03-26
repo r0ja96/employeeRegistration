@@ -14,28 +14,51 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  background-color: steelblue;
+  background-color: #465569;
 }
 
 .formLoginRegister > form {
   display: flex;
   flex-direction: column;
-  background-color: white;
-  color: blue;
-  padding: 3rem;
+  color: #81d4f3;
   text-align: center;
-  gap: 1rem;
+  gap: 3rem;
+  width: 350px;
+}
+
+input {
+  padding: 0.5rem;
+  background-color: #465569;
+  border: none;
+  border-bottom: #eefcfa solid 3px;
+  color: #eefcfa;
+  font-size: 1.1rem;
+}
+
+.formLoginRegister > form > input:focus {
+  outline: none;
 }
 
 .formLoginRegister > form > input[type="submit"] {
-  width: 50%;
-  align-self: center;
+  background-color: #81d4f3;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: #36677b;
+  cursor: pointer;
+}
+.formLoginRegister > form > input[type="submit"]:hover {
+  background-color: #5f97ac;
 }
 
 .formLoginRegister > form > a {
   cursor: pointer;
+  color: #eefcfa;
+  font-size: 1.1rem;
 }
-
+.formLoginRegister > form > a:hover {
+  text-decoration: underline;
+}
 /* Employees,Departments and JobTitles component*/
 .relativeDiv {
   position: relative;

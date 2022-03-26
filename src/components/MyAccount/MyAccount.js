@@ -1,7 +1,7 @@
-
+import './MyAccount.css';
 function MyAccount(){
 
-    return(<div>
+    return(<div id='myAccount' className='fullScreen'>
         <div>
             <h1>My Account</h1>
             <p>Name: Alan </p>
