@@ -7,6 +7,34 @@
 .fullScreen {
   height: 100vh;
 }
+/* All inputs and buttons*/
+input,
+select {
+  padding: 0.5rem;
+  background-color: #465569;
+  border: none;
+  border-bottom: #eefcfa solid 3px;
+  color: #eefcfa;
+  font-size: 1.1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="submit"],
+button {
+  background-color: #81d4f3;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  color: #36677b;
+  cursor: pointer;
+}
+input[type="submit"]:hover,
+button:hover {
+  background-color: #5f97ac;
+}
 
 /*login and register components styling*/
 
@@ -26,31 +54,6 @@
   width: 350px;
 }
 
-input {
-  padding: 0.5rem;
-  background-color: #465569;
-  border: none;
-  border-bottom: #eefcfa solid 3px;
-  color: #eefcfa;
-  font-size: 1.1rem;
-}
-
-.formLoginRegister > form > input:focus {
-  outline: none;
-}
-
-.formLoginRegister > form > input[type="submit"] {
-  background-color: #81d4f3;
-  border: none;
-  padding: 1rem;
-  font-size: 1.1rem;
-  color: #36677b;
-  cursor: pointer;
-}
-.formLoginRegister > form > input[type="submit"]:hover {
-  background-color: #5f97ac;
-}
-
 .formLoginRegister > form > a {
   cursor: pointer;
   color: #eefcfa;
@@ -59,18 +62,61 @@ input {
 .formLoginRegister > form > a:hover {
   text-decoration: underline;
 }
-/* Employees,Departments and JobTitles component*/
-.relativeDiv {
-  position: relative;
+
+/*Modifie and delete button*/
+
+.deleteBtn {
+  background-color: rgb(200, 0, 0);
+  color: rgb(100, 0, 0);
 }
 
-/*EmployeeForm, DepartmentForm and JobTitleForm*/
+.deleteBtn:hover {
+  background-color: rgb(150, 0, 0);
+}
 
-.registrationForm {
-  position: absolute;
-  border: solid 5px blue;
-  top: 0;
+.modifieBtn {
+  background-color: rgb(200, 200, 0);
+  color: rgb(100, 100, 0);
+}
+
+.modifieBtn:hover {
+  background-color: rgb(150, 150, 0);
+}
+
+/* Tables*/
+
+table {
+  border-collapse: collapse;
   width: 100%;
-  height: 100vh;
-  background-color: rgba(160, 235, 20, 1);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+tr:hover td {
+  background-color: #5f97ac;
+}
+
+/*Department and Job titles*/
+
+.jobDepartment {
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.jobDepartment > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jobDepartment > div > form {
+  display: flex;
+  gap: 1rem;
 }

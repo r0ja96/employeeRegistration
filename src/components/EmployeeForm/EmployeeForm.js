@@ -1,8 +1,8 @@
-
+import './EmployeeForm.css';
 
 function EmployeeForm({displayEmployeForm,setDisplayEmployeeForm}){
     
-    return(<div className='registrationForm' style={{display: displayEmployeForm}}>
+    return(<div id='employeeForm' style={{display: displayEmployeForm}}>
         
     <div>
 

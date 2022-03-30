@@ -26,8 +26,20 @@ function EmployeeTable(){
     <td>25</td>
     <td>Human resource</td>
     <td>Recurter</td>
-    <td><button>Modifie</button></td>
-    <td><button>Delete</button></td>
+    <td><button className='modifieBtn'>Modifie</button></td>
+    <td><button className='deleteBtn'>Delete</button></td>
+  </tr>
+  <tr>
+    <td>12345</td>
+    <td>Maria </td>
+    <td>Gonzales</td>
+    <td>F</td>
+    <td>60-19-1996</td>
+    <td>25</td>
+    <td>Human resource</td>
+    <td>Recurter</td>
+    <td><button className='modifieBtn'>Modifie</button></td>
+    <td><button className='deleteBtn'>Delete</button></td>
   </tr>
   </tbody>
 </table>);

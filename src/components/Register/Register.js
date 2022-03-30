@@ -5,6 +5,10 @@ function register({setRoute}){
                 <h1>REGISTER</h1>
                 <input type='text'placeholder="NAME"/>
                 <input type='text' placeholder="LAST NAME"/>
+                <select placeholder="Sex">
+                <option value="volvo">Male</option>
+                <option value="saab">Female</option>
+                </select>
                 <input type='date' placeholder="BIRTHDAY"/>
                 <input type='text' placeholder="E-MAIL"/>
                 <input type='text' placeholder="PASSWORD"/>
