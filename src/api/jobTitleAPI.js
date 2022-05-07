@@ -1,7 +1,7 @@
 async function insert(jobTitle){
     try {
 
-         const response = await fetch('http://localhost:4400/jobTitle',{
+         const response = await fetch('http://173.230.148.27:4400/jobTitle',{
                 method: 'post',
                 headers: {'Content-Type':'application/json'},
                 body: JSON.stringify(jobTitle)
@@ -19,7 +19,7 @@ async function insert(jobTitle){
     async function read({email, password}){
         try {
             
-             const response = await fetch('http://localhost:4400/jobTitle/info',{
+             const response = await fetch('http://173.230.148.27:4400/jobTitle/info',{
                     method: 'post',
                     headers: {'Content-Type':'application/json'},
                     body: JSON.stringify({email, password})
@@ -37,7 +37,7 @@ async function insert(jobTitle){
         async function del(jobTitle){
             try {
         
-                 const response = await fetch('http://localhost:4400/jobTitle',{
+                 const response = await fetch('http://173.230.148.27:4400/jobTitle',{
                         method: 'delete',
                         headers: {'Content-Type':'application/json'},
                         body: JSON.stringify(jobTitle)
@@ -55,7 +55,7 @@ async function insert(jobTitle){
             async function update(jobTitle){
                 try {
             
-                     const response = await fetch('http://localhost:4400/jobTitle',{
+                     const response = await fetch('http://173.230.148.27:4400/jobTitle',{
                             method: 'put',
                             headers: {'Content-Type':'application/json'},
                             body: JSON.stringify(jobTitle)

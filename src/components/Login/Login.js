@@ -21,7 +21,6 @@ function Login(props){
             props.setLoginFields(loginFields);
             props.setRoute('home');
         }
-        console.log(response);
     }
 
     return(

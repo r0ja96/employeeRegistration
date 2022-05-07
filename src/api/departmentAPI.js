@@ -1,7 +1,7 @@
 async function insert(department){
     try {
 
-         const response = await fetch('http://localhost:4400/department',{
+         const response = await fetch('http://173.230.148.27:4400/department',{
                 method: 'post',
                 headers: {'Content-Type':'application/json'},
                 body: JSON.stringify(department)
@@ -19,7 +19,7 @@ async function insert(department){
     async function read({email, password}){
         try {
             
-             const response = await fetch('http://localhost:4400/department/info',{
+             const response = await fetch('http://173.230.148.27:4400/department/info',{
                     method: 'post',
                     headers: {'Content-Type':'application/json'},
                     body: JSON.stringify({email, password})
@@ -37,7 +37,7 @@ async function insert(department){
         async function del(department){
             try {
         
-                 const response = await fetch('http://localhost:4400/department',{
+                 const response = await fetch('http://173.230.148.27:4400/department',{
                         method: 'delete',
                         headers: {'Content-Type':'application/json'},
                         body: JSON.stringify(department)
@@ -55,7 +55,7 @@ async function insert(department){
             async function update(department){
                 try {
             
-                     const response = await fetch('http://localhost:4400/department',{
+                     const response = await fetch('http://173.230.148.27:4400/department',{
                             method: 'put',
                             headers: {'Content-Type':'application/json'},
                             body: JSON.stringify(department)
