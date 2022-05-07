@@ -1,8 +1,16 @@
+import {useState,Fragment} from 'react';
 import "./Navigation.css";
 
+
+
 function Navigation({setRoute, setRouteDisplay}){
-    return(
-    <nav>
+
+   var [displayNavbar,setDisplayNavbar] = useState(false);
+
+    return(<Fragment>
+    {displayNavbar ? 
+   <nav>
+    <button className="deleteBtn" onClick={()=>setDisplayNavbar(false)}>X</button>
         <ul>
             <li onClick={()=>setRouteDisplay('myAccount')}>My Account</li>
             <li onClick={()=>setRouteDisplay('employees')}>Employees</li>
@@ -10,9 +18,11 @@ function Navigation({setRoute, setRouteDisplay}){
             <li onClick={()=>setRouteDisplay('jobTitles')}>Job titles</li>
             <li onClick={()=>setRouteDisplay('chart')}>Chart</li>
             <li onClick={()=>setRouteDisplay('reports')}>Report</li>
-            <li onClick={()=>setRoute('login')}>logout</li>
+            <li onClick={()=>setRoute('login')}>Logout</li>
         </ul>
-    </nav>)
+    </nav>:<button id='menuButton' onClick={()=>setDisplayNavbar(true)}>Menu</button>}
+    </Fragment>
+    )
 }
 
 export default Navigation;

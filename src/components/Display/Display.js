@@ -4,7 +4,6 @@ import Employees from '../Employees/Employees';
 import JobTitles from '../JobTitles/JobTitles';
 import MyAccount from '../MyAccount/MyAccount';
 import Reports from '../Reports/Reports';
-import './Display.css';
 
 
 function Display({routeDisplay}){

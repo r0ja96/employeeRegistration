@@ -1,6 +1,12 @@
 nav {
   background-color: #81d4f3;
   color: #36677b;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 nav > ul {
@@ -22,4 +28,10 @@ nav > ul > li {
 
 nav > ul > li:hover {
   background-color: #5f97ac;
+}
+
+#menuButton {
+  position: absolute;
+  width: 200px;
+  z-index: 1;
 }

@@ -1,0 +1,3 @@
+const LOGIN_FIELDS = 'LOGIN_FIELDS';
+
+export {LOGIN_FIELDS}

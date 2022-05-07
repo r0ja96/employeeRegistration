@@ -36,6 +36,15 @@ button:hover {
   background-color: #5f97ac;
 }
 
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 /*login and register components styling*/
 
 .formLoginRegister {
@@ -101,22 +110,104 @@ tr:hover td {
   background-color: #5f97ac;
 }
 
-/*Department and Job titles*/
+/*Departments, Jobtitles and Employees*/
 
-.jobDepartment {
-  text-align: center;
+.jobDepEm {
+  display: grid;
+  grid-template-rows: 100px 100px auto;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  height: 100%;
 }
 
-.jobDepartment > div {
+.jobDepEm  > div:first-child {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jobDepEm  > div:last-child{
+  overflow:scroll;
+}
+
+
+.addSearch {
+  display: flex;
+  flex-direction: row;;
+  align-items: center;
   justify-content: space-between;
 }
 
-.jobDepartment > div > form {
+/*Departments, Jobtitles and Employees forms*/
+
+.forms {
+  position: absolute;
+  top: 0;
+  background-color: rgba(70, 85, 105, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.forms > div {
+  width: 350px;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background-color: rgba(70, 85, 105, 1);
+  border: solid 3px #81d4f3;
+}
+
+.forms > div > div {
   display: flex;
-  gap: 1rem;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.forms > div > form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+/* utilities */
+.divRelitive {
+  position: relative;
+}
+
+/*Dispplay*/
+#display {
+  background-color: #465569;
+  color: #eefcfa;
+}
+
+/*Reports and Chart*/
+.reportChart{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 100px 100px auto;
+}
+
+.reportChart > div{
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.reportChart > div > form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  
+
+}
+
+.reportChart > div > object, .reportChart > div > .chart {
+  height: 100%;
+  width: 100%;
+  max-width: 1100px;
 }

@@ -1,16 +1,40 @@
+import loginAPI from "../../api/loginAPI";
+import { connect } from 'react-redux';
+import { setLoginFields } from '../../redux/actions/loginActions';
 
-function Login({setRoute}){
+const mapDispatchToProps = (dispatch) =>{
+    return {
+        setLoginFields: (loginFields) => dispatch(setLoginFields(loginFields))
+    }
+}
+
+
+function Login(props){
+    
+
+    const handleSubmit = async (event) =>{
+        event.preventDefault();
+        const{ email, password} = event.target.elements;
+        const loginFields = { email: email.value,password: password.value}
+        const response = await loginAPI(loginFields);
+        if(response === 'access'){
+            props.setLoginFields(loginFields);
+            props.setRoute('home');
+        }
+        console.log(response);
+    }
+
     return(
         <div className="fullScreen formLoginRegister">
-            <form onSubmit={()=>setRoute('home')}>
+            <form onSubmit={ handleSubmit}>
                 <h1>LOGIN</h1>
-                <input type='text' placeholder="E-MAIL"/>
-                <input type='text' placeholder="PASSWORD"/>
+                <input type='email' name='email' placeholder="E-MAIL" maxLength={'40'} required/>
+                <input type='password' name='password'placeholder="PASSWORD" maxLength={'40'} required/>
                 <input type='submit'  value='LOGIN' />
-                <a onClick={()=>setRoute('register')}>REGISTER</a>            
+                <a onClick={()=>props.setRoute('register')}>REGISTER</a>            
             </form>
         </div>
     );
 }
 
-export default Login;
+export default connect(null, mapDispatchToProps)(Login);
