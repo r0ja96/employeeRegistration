@@ -1,7 +1,7 @@
 async function insert(employee){
     try {
 
-         const response = await fetch('http://localhost:4400/employee',{
+         const response = await fetch('https://employeeregistration.herokuapp.com/employee',{
                 method: 'post',
                 headers: {'Content-Type':'application/json'},
                 body: JSON.stringify(employee)
@@ -19,7 +19,7 @@ async function insert(employee){
     async function read({email, password}){
         try {
             
-             const response = await fetch('http://localhost:4400/employee/info',{
+             const response = await fetch('https://employeeregistration.herokuapp.com/employee/info',{
                     method: 'post',
                     headers: {'Content-Type':'application/json'},
                     body: JSON.stringify({email, password})
@@ -37,7 +37,7 @@ async function insert(employee){
         async function del(employee){
             try {
         
-                 const response = await fetch('http://localhost:4400/employee',{
+                 const response = await fetch('https://employeeregistration.herokuapp.com/employee',{
                         method: 'delete',
                         headers: {'Content-Type':'application/json'},
                         body: JSON.stringify(employee)
@@ -55,7 +55,7 @@ async function insert(employee){
             async function update(employee){
                 try {
             
-                     const response = await fetch('http://localhost:4400/employee',{
+                     const response = await fetch('https://employeeregistration.herokuapp.com/employee',{
                             method: 'put',
                             headers: {'Content-Type':'application/json'},
                             body: JSON.stringify(employee)

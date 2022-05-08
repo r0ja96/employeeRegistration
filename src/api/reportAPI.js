@@ -1,7 +1,7 @@
 async function getReport({email, password, employeeID}){
     try {
         
-         const response = await fetch('http://localhost:4400/report',{
+         const response = await fetch('https://employeeregistration.herokuapp.com/report',{
                 method: 'post',
                 headers: {'Content-Type':'application/json'},
                 body: JSON.stringify({email, password, employeeID})

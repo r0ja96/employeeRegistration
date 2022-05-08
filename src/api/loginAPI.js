@@ -1,7 +1,7 @@
 async function loginAPI(loginFields){
     try {
         
-         const response = await fetch('http://localhost:4400/account/signin',{
+         const response = await fetch('https://employeeregistration.herokuapp.com/account/signin',{
                 method: 'post',
                 headers: {'Content-Type':'application/json'},
                 body: JSON.stringify(loginFields)
