@@ -1,4 +1,4 @@
-Make sure all the fetch call have the rigth API endpoint.
+Make sure all the fetch call have the rigth API endpoint(src/api).
 
 ### `npm install`
 
