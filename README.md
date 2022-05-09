@@ -8,4 +8,6 @@ To install project.
 
 To run project.
 
+Server-side (back-end) project https://github.com/r0ja96/employeeRegistrationNode .
+
 Original Project Created by r0ja96.
